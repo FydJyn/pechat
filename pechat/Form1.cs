@@ -6,14 +6,20 @@ namespace pechat
 {
     public partial class Form1 : Form
     {
-        private string targetText = "мама мыла раму";
+        private string targetText = "";
         private Stopwatch stopwatch = new Stopwatch();
         private bool started = false;
 
         public Form1()
         {
             InitializeComponent();
-            lblTargetText.Text = targetText;
+
+            cmbDifficulty.Items.Add("Легкий");
+            cmbDifficulty.Items.Add("Средний");
+            cmbDifficulty.Items.Add("Сложный");
+            cmbDifficulty.SelectedIndex = 0;
+
+            lblTargetText.Text = "";
             lblTime.Text = "Время: 0 сек";
             lblErrors.Text = "Ошибки: 0";
             lblResult.Text = "Статус: ожидание";
@@ -21,8 +27,12 @@ namespace pechat
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            targetText = GetTextByDifficulty();
+
             txtInput.Clear();
             txtInput.Focus();
+
+            lblTargetText.Text = targetText;
 
             stopwatch.Reset();
             stopwatch.Start();
@@ -34,6 +44,24 @@ namespace pechat
             lblResult.Text = "Статус: тренировка началась";
 
             timer1.Start();
+        }
+
+        private string GetTextByDifficulty()
+        {
+            switch (cmbDifficulty.SelectedItem.ToString())
+            {
+                case "Легкий":
+                    return "мама мыла раму";
+
+                case "Средний":
+                    return "сегодня я учусь работать с windows forms";
+
+                case "Сложный":
+                    return "программирование требует внимания терпения и постоянной практики";
+
+                default:
+                    return "мама мыла раму";
+            }
         }
 
         private void txtInput_TextChanged(object sender, EventArgs e)
