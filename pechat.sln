@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pechat", "pechat\pechat.csproj", "{1A71317F-6647-4DAD-BF1C-B46F86D4B3BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A71317F-6647-4DAD-BF1C-B46F86D4B3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A71317F-6647-4DAD-BF1C-B46F86D4B3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A71317F-6647-4DAD-BF1C-B46F86D4B3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A71317F-6647-4DAD-BF1C-B46F86D4B3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC03715C-4AE1-45B0-9E4D-40DD1BC1A0B4}
+	EndGlobalSection
+EndGlobal
